@@ -2,17 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from '../Headings/Heading';
 
-export default function HeroBanner({ title, children }) {
+import { HeroBannerStyles } from './HeroBannerStyles';
+
+export default function HeroBanner({ title, children, align }) {
   return (
-    <div>
-      {title && <Heading heading={title} />}
+    <HeroBannerStyles>
+      {title && <Heading heading={title} align={align} />}
 
       {children}
-    </div>
+    </HeroBannerStyles>
   );
 }
 
 HeroBanner.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.object,
+  children: PropTypes.array,
+  align: PropTypes.string,
 };

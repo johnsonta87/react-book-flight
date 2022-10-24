@@ -7,6 +7,7 @@ const theme = createTheme({
       light: '#757ce8',
       main: '#3f50b5',
       dark: '#002884',
+      white: '#fff',
       contrastText: '#fff',
     },
     secondary: {
@@ -34,10 +35,11 @@ const theme = createTheme({
   },
 
   components: {
-    MuiFormControl: {
+    MuiInputBase: {
       styleOverrides: {
         root: {
           fontSize: '1rem',
+          backgroundColor: '#fff',
         },
       },
     },
