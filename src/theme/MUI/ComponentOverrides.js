@@ -25,7 +25,7 @@ export const MuiButton = {
 
       '&:hover': {
         color: Palette.primary.white,
-        backgroundColor: Palette.primary.main,
+        backgroundColor: Palette.primary.light,
         borderColor: Palette.primary.dark,
       },
     },
@@ -48,6 +48,8 @@ export const MuiInputBase = {
     root: {
       fontSize: '1rem',
       backgroundColor: '#fff',
+    },
+    input: {
       borderRadius: '999px',
     },
   },
@@ -70,6 +72,14 @@ export const MuiTypography = {
     },
     {
       props: {
+        variant: 'h2',
+      },
+      style: {
+        color: Palette.primary.white,
+      },
+    },
+    {
+      props: {
         variant: 'bodySemi1',
       },
       style: {
@@ -87,9 +97,21 @@ export const MuiTypography = {
       style: {
         fontWeight: 'bold',
         fontSize: '1rem',
+        lineHeight: '1.125',
         '@media (min-width:600px)': {
           fontSize: '1.25rem',
         },
+      },
+    },
+    {
+      props: {
+        variant: 'bodySmall',
+      },
+      style: {
+        margin: '0 auto',
+        width: '100%',
+        color: `${Palette.primary.white} !important`,
+        fontSize: '0.7rem',
       },
     },
   ],

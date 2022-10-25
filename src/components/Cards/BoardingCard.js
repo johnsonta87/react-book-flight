@@ -13,7 +13,18 @@ export default function BoardingCard({ journey, showFullDetails }) {
   return (
     <BoardingCardStyles>
       {showFullDetails && (
-        <img className="logo-img" src="/logo.svg" alt="United" loading="lazy" />
+        <InnerColumn className="rsp">
+          <img
+            className="logo-img"
+            src="/logo.svg"
+            alt="United"
+            loading="lazy"
+          />
+
+          {journey.departDate && (
+            <div className="departDate">{journey.departDate}</div>
+          )}
+        </InnerColumn>
       )}
 
       <InnerColumn>
@@ -22,14 +33,16 @@ export default function BoardingCard({ journey, showFullDetails }) {
       </InnerColumn>
 
       <InnerColumn>
-        <JourneyInfo journey={journey.origin} />
-        <JourneyInfo journey={journey.destination} />
+        {journey.origin && <JourneyInfo journey={journey.origin} />}
+        {journey.destination && <JourneyInfo journey={journey.destination} />}
       </InnerColumn>
 
       <InnerColumn>
-        <PassengerDetail travellers={journey.travellers} />
+        {journey.travellers && (
+          <PassengerDetail travellers={journey.travellers} />
+        )}
 
-        <Terminal terminal={journey.terminal} />
+        {journey.terminal && <Terminal terminal={journey.terminal} />}
       </InnerColumn>
     </BoardingCardStyles>
   );

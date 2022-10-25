@@ -18,6 +18,6 @@ export default function Heading({ heading, align, variant, isLight }) {
 Heading.propTypes = {
   heading: PropTypes.string.isRequired,
   align: PropTypes.string,
-  variant: PropTypes.string,
   isLight: PropTypes.bool,
+  variant: PropTypes.string,
 };

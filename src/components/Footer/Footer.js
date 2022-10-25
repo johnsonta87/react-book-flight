@@ -2,11 +2,12 @@ import React from 'react';
 
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import { FooterStyles } from './FooterStyles';
 
 export default function Footer() {
   return (
-    <footer className="footer-app">
-      <Typography variant="body2" color="text.secondary" align="center">
+    <FooterStyles>
+      <Typography variant="bodySmall" color="text.secondary" align="center">
         &copy; {new Date().getFullYear()} - Built by{' '}
         <Link
           color="inherit"
@@ -27,6 +28,6 @@ export default function Footer() {
           View inspiration
         </Link>
       </Typography>
-    </footer>
+    </FooterStyles>
   );
 }

@@ -1,8 +1,8 @@
 export const Palette = {
   primary: {
-    light: '#757ce8',
+    light: '#6b79d0',
     main: '#3f50b5',
-    dark: '#002884',
+    dark: '#3f50b5',
     black: '#000',
     white: '#fff',
     contrastText: '#fff',
