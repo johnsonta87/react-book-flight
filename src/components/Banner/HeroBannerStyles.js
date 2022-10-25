@@ -7,6 +7,7 @@ export const HeroBannerStyles = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  text-align: center;
 `;

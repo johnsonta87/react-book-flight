@@ -5,7 +5,7 @@ import { AppStyles } from './theme/AppStyles';
 
 function App() {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" variant="app-container">
       <AppStyles>
         <Booking />
 

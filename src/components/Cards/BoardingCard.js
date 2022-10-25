@@ -1,8 +1,31 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 import { BoardingCardStyles, InnerColumn } from './BoardingCardStyles';
+import PassengerDetail from '../Flight/PassengerDetail';
+import Terminal from '../Flight/Terminal';
+import JourneyInfo from '../Flight/JourneyInfo';
 
 export default function BoardingCard() {
+  const journey = {
+    origin: {
+      airportCode: 'LAG',
+      city: 'Lagos',
+    },
+    destination: {
+      airportCode: 'DUB',
+      city: 'Dubai',
+    },
+    terminal: {
+      gate: '3 Gate 4C',
+    },
+    travellers: [
+      {
+        firstName: 'Tommy',
+        lastName: 'Grey',
+      },
+    ],
+  };
+
   return (
     <BoardingCardStyles>
       <InnerColumn>
@@ -11,35 +34,14 @@ export default function BoardingCard() {
       </InnerColumn>
 
       <InnerColumn>
-        <div>
-          <Typography variant="body1">Lagos</Typography>
-          <Typography variant="body2">
-            <strong>LAG</strong>
-          </Typography>
-        </div>
-
-        <div>
-          <Typography variant="body1">Dubai</Typography>
-          <Typography variant="body2">
-            <strong>DUB</strong>
-          </Typography>
-        </div>
+        <JourneyInfo journey={journey.origin} />
+        <JourneyInfo journey={journey.destination} />
       </InnerColumn>
 
       <InnerColumn>
-        <div>
-          <Typography variant="body1">Passenger</Typography>
-          <Typography variant="body2">
-            <strong>Tommy Grey</strong>
-          </Typography>
-        </div>
+        <PassengerDetail travellers={journey.travellers} />
 
-        <div>
-          <Typography variant="body1">Terminal</Typography>
-          <Typography variant="body2">
-            <strong>3 Gate 4C</strong>
-          </Typography>
-        </div>
+        <Terminal terminal={journey.terminal} />
       </InnerColumn>
     </BoardingCardStyles>
   );

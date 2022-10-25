@@ -6,6 +6,7 @@ export const BoardingCardStyles = styled.div`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2.5em;
 `;
 
 export const InnerColumn = styled.div`

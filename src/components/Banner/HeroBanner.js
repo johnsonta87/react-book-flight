@@ -7,7 +7,9 @@ import { HeroBannerStyles } from './HeroBannerStyles';
 export default function HeroBanner({ title, children, align, variant }) {
   return (
     <HeroBannerStyles>
-      {title && <Heading heading={title} align={align} variant={variant} />}
+      {title && (
+        <Heading heading={title} align={align} variant={variant} isLight />
+      )}
 
       {children}
     </HeroBannerStyles>

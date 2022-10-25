@@ -1,5 +1,10 @@
 import { createTheme } from '@mui/material/styles';
-import { MuiButton, MuiInputBase } from './MUI/ComponentOverrides';
+import {
+  MuiContainer,
+  MuiButton,
+  MuiInputBase,
+  MuiTypography,
+} from './MUI/ComponentOverrides';
 import { Palette } from './MUI/Palette';
 import { Typography } from './MUI/Typography';
 
@@ -8,8 +13,10 @@ const theme = createTheme({
   palette: Palette,
   typography: Typography,
   components: {
+    MuiContainer,
     MuiButton,
     MuiInputBase,
+    MuiTypography,
   },
 });
 
