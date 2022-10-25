@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import { Typography } from '@mui/material';
 
-export default function Heading({ heading, align }) {
+export default function Heading({ heading, align, variant }) {
   if (!heading) {
     return;
   }
 
   return (
-    <Typography variant="h1" align={align} mb={3}>
+    <Typography variant={variant} align={align} mb={3}>
       {heading}
     </Typography>
   );
@@ -18,4 +18,5 @@ export default function Heading({ heading, align }) {
 Heading.propTypes = {
   heading: PropTypes.string.isRequired,
   align: PropTypes.string,
+  variant: PropTypes.string,
 };

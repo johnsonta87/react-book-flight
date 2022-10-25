@@ -22,13 +22,13 @@ export default function TripType() {
   };
 
   return (
-    <ButtonGroup variant="contained">
+    <ButtonGroup fullWidth>
       {tripTypes &&
         tripTypes.length &&
         tripTypes.map((trip, index) => (
           <Button
             key={index}
-            variant={trip.isActive ? 'contained' : 'outlined'}
+            variant={trip.isActive && 'active'}
             onClick={handleClick}
           >
             {trip.value}
