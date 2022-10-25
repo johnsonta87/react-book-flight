@@ -7,6 +7,10 @@ export const BoardingCardStyles = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 2.5em;
+
+  .logo-img {
+    max-width: 150px;
+  }
 `;
 
 export const InnerColumn = styled.div`

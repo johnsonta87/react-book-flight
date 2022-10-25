@@ -5,13 +5,17 @@ import { Typography } from '@mui/material';
 import { BoardingCardStyles, InnerColumn } from './BoardingCardStyles';
 import { PassengerDetail, JourneyInfo, Terminal } from '../Flight';
 
-export default function BoardingCard({ journey }) {
+export default function BoardingCard({ journey, showFullDetails }) {
   if (!journey) {
     return null;
   }
 
   return (
     <BoardingCardStyles>
+      {showFullDetails && (
+        <img className="logo-img" src="/logo.svg" alt="United" loading="lazy" />
+      )}
+
       <InnerColumn>
         <Typography variant="body1">From</Typography>
         <Typography variant="body1">To</Typography>
@@ -33,4 +37,5 @@ export default function BoardingCard({ journey }) {
 
 BoardingCard.propTypes = {
   journey: PropTypes.object.isRequired,
+  showFullDetails: PropTypes.bool,
 };

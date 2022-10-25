@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Typography } from '@mui/material';
 
 export default function PassengerDetail({ travellers }) {
-  if (!travellers && !travellers.length) {
+  if (!travellers && !travellers?.length) {
     return null;
   }
 
