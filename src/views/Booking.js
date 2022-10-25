@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@mui/material/Box';
+import { Box } from '@mui/material';
 import HeroBanner from '../components/Banner/HeroBanner';
 import FlightSearch from '../components/FlightSearch/FlightSearch';
 import TripType from '../components/TripType/TripType';

@@ -1,4 +1,4 @@
-import Container from '@mui/material/Container';
+import { Container } from '@mui/material';
 import Footer from './components/Footer/Footer';
 import Booking from './views/Booking';
 import { AppStyles } from './theme/AppStyles';
