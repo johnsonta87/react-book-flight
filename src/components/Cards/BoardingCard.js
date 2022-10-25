@@ -1,30 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Typography } from '@mui/material';
 import { BoardingCardStyles, InnerColumn } from './BoardingCardStyles';
-import PassengerDetail from '../Flight/PassengerDetail';
-import Terminal from '../Flight/Terminal';
-import JourneyInfo from '../Flight/JourneyInfo';
+import { PassengerDetail, JourneyInfo, Terminal } from '../Flight';
 
-export default function BoardingCard() {
-  const journey = {
-    origin: {
-      airportCode: 'LAG',
-      city: 'Lagos',
-    },
-    destination: {
-      airportCode: 'DUB',
-      city: 'Dubai',
-    },
-    terminal: {
-      gate: '3 Gate 4C',
-    },
-    travellers: [
-      {
-        firstName: 'Tommy',
-        lastName: 'Grey',
-      },
-    ],
-  };
+export default function BoardingCard({ journey }) {
+  if (!journey) {
+    return null;
+  }
 
   return (
     <BoardingCardStyles>
@@ -46,3 +30,7 @@ export default function BoardingCard() {
     </BoardingCardStyles>
   );
 }
+
+BoardingCard.propTypes = {
+  journey: PropTypes.object.isRequired,
+};
