@@ -16,7 +16,16 @@ export default function Footer() {
         >
           @johnsonta87
         </Link>{' '}
-        .
+        with Create React App.
+        <br />
+        <Link
+          color="inherit"
+          href="https://www.behance.net/gallery/154831459/024-Boarding-Pass-UI?tracking_source=search_projects%7Cboarding+pass"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View inspiration
+        </Link>
       </Typography>
     </footer>
   );

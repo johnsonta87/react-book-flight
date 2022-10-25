@@ -15,13 +15,15 @@ export const MuiContainer = {
 export const MuiButton = {
   styleOverrides: {
     root: {
+      display: 'flex',
+      margin: '0 auto',
       fontSize: '1rem',
       color: Palette.primary.black,
       backgroundColor: Palette.primary.white,
       border: `2px solid ${Palette.primary.dark}`,
       borderRadius: '999px',
 
-      '&:hover, &:focus': {
+      '&:hover': {
         color: Palette.primary.white,
         backgroundColor: Palette.primary.main,
         borderColor: Palette.primary.dark,

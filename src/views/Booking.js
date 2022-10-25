@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import HeroBanner from '../components/Banner/HeroBanner';
 import FlightSearch from '../components/FlightSearch/FlightSearch';
 import TripType from '../components/TripType/TripType';
@@ -19,8 +19,9 @@ export default function Booking({ journey }) {
       </Box>
 
       {journey && (
-        <Box sx={{ pl: 3, pr: 3 }}>
+        <Box sx={{ p: 3, pt: 0 }}>
           <BoardingPassMini journey={journey} />
+          <Button variant="text">View Boarding Pass</Button>
         </Box>
       )}
     </div>

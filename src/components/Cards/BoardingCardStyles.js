@@ -12,5 +12,5 @@ export const BoardingCardStyles = styled.div`
 export const InnerColumn = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 `;

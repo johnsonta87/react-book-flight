@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ButtonGroup, Button } from '@mui/material';
 
 export default function TripType() {
+  const [active, setActive] = useState(0);
+
   const tripTypes = [
     {
       value: 'Round-Trip',
@@ -17,10 +19,6 @@ export default function TripType() {
     },
   ];
 
-  const handleClick = () => {
-    console.log('clicked');
-  };
-
   return (
     <ButtonGroup fullWidth>
       {tripTypes &&
@@ -28,8 +26,10 @@ export default function TripType() {
         tripTypes.map((trip, index) => (
           <Button
             key={index}
-            variant={trip.isActive && 'active'}
-            onClick={handleClick}
+            variant={active === index && 'active'}
+            onClick={() => {
+              setActive(index);
+            }}
           >
             {trip.value}
           </Button>
